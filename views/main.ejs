@@ -1,0 +1,10 @@
+
+<h1> YT DOWNLOADER </h1>
+<%= (typeof error !== 'undefined') ? error : ''%>
+<form action="/get" method="POST">
+    <div>
+        <label for="auth">URL</label>
+        <input type="text" id="link" name="link" required>
+    </div>
+    <button type="submit">Download!</button>
+</form>
