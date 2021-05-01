@@ -4,7 +4,9 @@
   "description": "Well",
   "main": "dist/index.js",
   "scripts": {
-    "test": "node test"
+    "build": "tsc -p .",
+    "start": "node ./dist/app.js",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
