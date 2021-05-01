@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.render('main.ejs')
 })
 app.post('/get', async (req, res) => {
-    const video = await download(req.body.link.tirm())
+    const video = await download(req.body.link)
     if (!video.sucess) return res.render('main.ejs', { error: video.data })
     res.setHeader('Content-disposition', `attachment; filename=video.mp4`)
     res.sendFile(video.data, () => unlinkSync(video.data))
